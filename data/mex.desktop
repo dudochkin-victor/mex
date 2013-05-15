@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Media Explorer
+Exec=mex -f
+Icon=mex
+Categories=AudioVideo;Video;TV;Player;
+Terminal=false
+StartupNotify=true
+X-Meego-Watchdog=restart
+

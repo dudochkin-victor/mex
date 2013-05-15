@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexTile</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch09.html" title="Basic widgets">
+<link rel="prev" href="MexSlideShow.html" title="MexSlideShow">
+<link rel="next" href="MexVolumeControl.html" title="MexVolumeControl">
+<meta name="generator" content="GTK-Doc V1.15 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexSlideShow.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexVolumeControl.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexTile.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexTile.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexTile.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexTile.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#MexTile.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="MexTile">
+<a name="MexTile"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexTile.top_of_page"></a>MexTile</span></h2>
+<p>MexTile</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="MexTile.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="MexTile.html#MexTile-struct" title="MexTile">MexTile</a>;
+                    <a class="link" href="MexTile.html#MexTileClass" title="MexTileClass">MexTileClass</a>;
+                    <a class="link" href="MexTile.html#MexTilePrivate" title="MexTilePrivate">MexTilePrivate</a>;
+<a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="MexTile.html#mex-tile-new" title="mex_tile_new ()">mex_tile_new</a>                        (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="MexTile.html#mex-tile-new-with-label" title="mex_tile_new_with_label ()">mex_tile_new_with_label</a>             (<em class="parameter"><code>const <span class="type">gchar</span> *label</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexTile.html#mex-tile-set-label" title="mex_tile_set_label ()">mex_tile_set_label</a>                  (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *label</code></em>);
+const <span class="returnvalue">gchar</span> *       <a class="link" href="MexTile.html#mex-tile-get-label" title="mex_tile_get_label ()">mex_tile_get_label</a>                  (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexTile.html#mex-tile-set-primary-icon" title="mex_tile_set_primary_icon ()">mex_tile_set_primary_icon</a>           (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *icon</code></em>);
+<a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="MexTile.html#mex-tile-get-primary-icon" title="mex_tile_get_primary_icon ()">mex_tile_get_primary_icon</a>           (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexTile.html#mex-tile-set-secondary-icon" title="mex_tile_set_secondary_icon ()">mex_tile_set_secondary_icon</a>         (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *icon</code></em>);
+<a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="MexTile.html#mex-tile-get-secondary-icon" title="mex_tile_get_secondary_icon ()">mex_tile_get_secondary_icon</a>         (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="MexTile.html#mex-tile-get-header-visible" title="mex_tile_get_header_visible ()">mex_tile_get_header_visible</a>         (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexTile.html#mex-tile-set-header-visible" title="mex_tile_set_header_visible ()">mex_tile_set_header_visible</a>         (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> header_visible</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="MexTile.html#mex-tile-get-important" title="mex_tile_get_important ()">mex_tile_get_important</a>              (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexTile.html#mex-tile-set-important" title="mex_tile_set_important ()">mex_tile_set_important</a>              (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> important</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="MexTile.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----<a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html">ClutterActor</a>
+               +----MxWidget
+                     +----MxBin
+                           +----MexTile
+                                 +----<a class="link" href="MexContentTile.html" title="MexContentTile">MexContentTile</a>
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="MexTile.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MexTile implements
+ <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterScriptable.html">ClutterScriptable</a>,  <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterAnimatable.html">ClutterAnimatable</a>,  AtkImplementorIface,  MxStylable,  <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterContainer.html">ClutterContainer</a> and  MxFocusable.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="MexTile.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexTile.html#MexTile--header-visible" title='The "header-visible" property'>header-visible</a>"           <span class="type">gboolean</span>              : Read / Write
+  "<a class="link" href="MexTile.html#MexTile--important" title='The "important" property'>important</a>"                <span class="type">gboolean</span>              : Read / Write
+  "<a class="link" href="MexTile.html#MexTile--label" title='The "label" property'>label</a>"                    <span class="type">gchar</span>*                : Read / Write
+  "<a class="link" href="MexTile.html#MexTile--primary-icon" title='The "primary-icon" property'>primary-icon</a>"             <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a>*         : Read / Write
+  "<a class="link" href="MexTile.html#MexTile--secondary-icon" title='The "secondary-icon" property'>secondary-icon</a>"           <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a>*         : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="MexTile.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1" title="Details">
+<a name="MexTile.details"></a><h2>Details</h2>
+<div class="refsect2" title="MexTile">
+<a name="MexTile-struct"></a><h3>MexTile</h3>
+<pre class="programlisting">typedef struct _MexTile MexTile;</pre>
+</div>
+<hr>
+<div class="refsect2" title="MexTileClass">
+<a name="MexTileClass"></a><h3>MexTileClass</h3>
+<pre class="programlisting">typedef struct {
+  MxBinClass parent_class;
+} MexTileClass;
+</pre>
+</div>
+<hr>
+<div class="refsect2" title="MexTilePrivate">
+<a name="MexTilePrivate"></a><h3>MexTilePrivate</h3>
+<pre class="programlisting">typedef struct _MexTilePrivate MexTilePrivate;</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_tile_new ()">
+<a name="mex-tile-new"></a><h3>mex_tile_new ()</h3>
+<pre class="programlisting"><a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_tile_new                        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_tile_new_with_label ()">
+<a name="mex-tile-new-with-label"></a><h3>mex_tile_new_with_label ()</h3>
+<pre class="programlisting"><a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_tile_new_with_label             (<em class="parameter"><code>const <span class="type">gchar</span> *label</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_tile_set_label ()">
+<a name="mex-tile-set-label"></a><h3>mex_tile_set_label ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_tile_set_label                  (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *label</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_tile_get_label ()">
+<a name="mex-tile-get-label"></a><h3>mex_tile_get_label ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *       mex_tile_get_label                  (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_tile_set_primary_icon ()">
+<a name="mex-tile-set-primary-icon"></a><h3>mex_tile_set_primary_icon ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_tile_set_primary_icon           (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *icon</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_tile_get_primary_icon ()">
+<a name="mex-tile-get-primary-icon"></a><h3>mex_tile_get_primary_icon ()</h3>
+<pre class="programlisting"><a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_tile_get_primary_icon           (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_tile_set_secondary_icon ()">
+<a name="mex-tile-set-secondary-icon"></a><h3>mex_tile_set_secondary_icon ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_tile_set_secondary_icon         (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *icon</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_tile_get_secondary_icon ()">
+<a name="mex-tile-get-secondary-icon"></a><h3>mex_tile_get_secondary_icon ()</h3>
+<pre class="programlisting"><a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_tile_get_secondary_icon         (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_tile_get_header_visible ()">
+<a name="mex-tile-get-header-visible"></a><h3>mex_tile_get_header_visible ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mex_tile_get_header_visible         (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_tile_set_header_visible ()">
+<a name="mex-tile-set-header-visible"></a><h3>mex_tile_set_header_visible ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_tile_set_header_visible         (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> header_visible</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_tile_get_important ()">
+<a name="mex-tile-get-important"></a><h3>mex_tile_get_important ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mex_tile_get_important              (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_tile_set_important ()">
+<a name="mex-tile-set-important"></a><h3>mex_tile_set_important ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_tile_set_important              (<em class="parameter"><code><a class="link" href="MexTile.html" title="MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> important</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="MexTile.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "header-visible" property'>
+<a name="MexTile--header-visible"></a><h3>The <code class="literal">"header-visible"</code> property</h3>
+<pre class="programlisting">  "header-visible"           <span class="type">gboolean</span>              : Read / Write</pre>
+<p>Whether the tile header is visible or not.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "important" property'>
+<a name="MexTile--important"></a><h3>The <code class="literal">"important"</code> property</h3>
+<pre class="programlisting">  "important"                <span class="type">gboolean</span>              : Read / Write</pre>
+<p>Whether the tile is important.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "label" property'>
+<a name="MexTile--label"></a><h3>The <code class="literal">"label"</code> property</h3>
+<pre class="programlisting">  "label"                    <span class="type">gchar</span>*                : Read / Write</pre>
+<p>Text to use for the label of the tile.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" title='The "primary-icon" property'>
+<a name="MexTile--primary-icon"></a><h3>The <code class="literal">"primary-icon"</code> property</h3>
+<pre class="programlisting">  "primary-icon"             <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a>*         : Read / Write</pre>
+<p>ClutterActor to display in the primary icon position of the tile.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "secondary-icon" property'>
+<a name="MexTile--secondary-icon"></a><h3>The <code class="literal">"secondary-icon"</code> property</h3>
+<pre class="programlisting">  "secondary-icon"           <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a>*         : Read / Write</pre>
+<p>ClutterActor to display in the secondary icon position of the tile.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.15</div>
+</body>
+</html>

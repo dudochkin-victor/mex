@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexModel</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch04.html" title="Abstract classes and interfaces">
+<link rel="prev" href="mex-mex-media-player-ginterface.html" title="mex-media-player-ginterface">
+<link rel="next" href="MexProxy.html" title="MexProxy">
+<meta name="generator" content="GTK-Doc V1.15 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-mex-media-player-ginterface.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexProxy.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexModel.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexModel.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexModel.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexModel.implementations" class="shortcut">Known Implementations</a>
+                   | 
+                  <a href="#MexModel.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="MexModel">
+<a name="MexModel"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexModel.top_of_page"></a>MexModel</span></h2>
+<p>MexModel — Interface for collections of <a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a></p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="MexModel.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="MexModel.html#MEX-MODEL-IFACE:CAPS" title="MEX_MODEL_IFACE()">MEX_MODEL_IFACE</a>                     (iface)
+#define             <a class="link" href="MexModel.html#MEX-IS-MODEL-IFACE:CAPS" title="MEX_IS_MODEL_IFACE()">MEX_IS_MODEL_IFACE</a>                  (iface)
+                    <a class="link" href="MexModel.html#MexModel-struct" title="MexModel">MexModel</a>;
+                    <a class="link" href="MexModel.html#MexModelIface" title="MexModelIface">MexModelIface</a>;
+<span class="returnvalue">gint</span>                (<a class="link" href="MexModel.html#MexModelSortFunc" title="MexModelSortFunc ()">*MexModelSortFunc</a>)                 (<em class="parameter"><code><a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a> *a</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a> *b</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> userdata</code></em>);
+<span class="returnvalue">GController</span> *       <a class="link" href="MexModel.html#mex-model-get-controller" title="mex_model_get_controller ()">mex_model_get_controller</a>            (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *list</code></em>);
+<a class="link" href="MexContent.html" title="MexContent"><span class="returnvalue">MexContent</span></a> *        <a class="link" href="MexModel.html#mex-model-get-content" title="mex_model_get_content ()">mex_model_get_content</a>               (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *list</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> index_</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexModel.html#mex-model-add-content" title="mex_model_add_content ()">mex_model_add_content</a>               (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *model</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a> *content</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexModel.html#mex-model-remove-content" title="mex_model_remove_content ()">mex_model_remove_content</a>            (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *model</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a> *content</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexModel.html#mex-model-clear" title="mex_model_clear ()">mex_model_clear</a>                     (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *model</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexModel.html#mex-model-set-sort-func" title="mex_model_set_sort_func ()">mex_model_set_sort_func</a>             (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *model</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexModel.html#MexModelSortFunc" title="MexModelSortFunc ()"><span class="type">MexModelSortFunc</span></a> sort_func</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> userdata</code></em>);
+<span class="returnvalue">guint</span>               <a class="link" href="MexModel.html#mex-model-get-length" title="mex_model_get_length ()">mex_model_get_length</a>                (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *model</code></em>);
+<span class="returnvalue">gint</span>                <a class="link" href="MexModel.html#mex-model-index" title="mex_model_index ()">mex_model_index</a>                     (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *model</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a> *content</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="MexModel.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----MexModel
+</pre>
+</div>
+<div class="refsect1" title="Known Implementations">
+<a name="MexModel.implementations"></a><h2>Known Implementations</h2>
+<p>
+MexModel is implemented by
+ <a class="link" href="MexAggregateModel.html" title="MexAggregateModel">MexAggregateModel</a>,  <a class="link" href="MexFeed.html" title="MexFeed">MexFeed</a>,  <a class="link" href="MexGenericModel.html" title="MexGenericModel">MexGenericModel</a>,  <a class="link" href="MexGriloFeed.html" title="MexGriloFeed">MexGriloFeed</a>,  <a class="link" href="MexGriloTrackerFeed.html" title="MexGriloTrackerFeed">MexGriloTrackerFeed</a>,  MexProxyModel and  <a class="link" href="MexQueueModel.html" title="MexQueueModel">MexQueueModel</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="MexModel.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexModel.html#MexModel--sort-data" title='The "sort-data" property'>sort-data</a>"                <span class="type">gpointer</span>              : Read
+  "<a class="link" href="MexModel.html#MexModel--sort-function" title='The "sort-function" property'>sort-function</a>"            <span class="type">gpointer</span>              : Read
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="MexModel.description"></a><h2>Description</h2>
+<p>
+A class can implement <a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> to provide generic access to a collection
+of <a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a> objects, with optional sorting and filtering.
+</p>
+<p>
+The interface also provides access to the <span class="type">GController</span> for a model, which
+advertises changes to the model via signals.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="MexModel.details"></a><h2>Details</h2>
+<div class="refsect2" title="MEX_MODEL_IFACE()">
+<a name="MEX-MODEL-IFACE:CAPS"></a><h3>MEX_MODEL_IFACE()</h3>
+<pre class="programlisting">#define MEX_MODEL_IFACE(iface)      (G_TYPE_CHECK_CLASS_CAST ((iface), MEX_TYPE_MODEL, MexModelIface))
+</pre>
+</div>
+<hr>
+<div class="refsect2" title="MEX_IS_MODEL_IFACE()">
+<a name="MEX-IS-MODEL-IFACE:CAPS"></a><h3>MEX_IS_MODEL_IFACE()</h3>
+<pre class="programlisting">#define MEX_IS_MODEL_IFACE(iface)   (G_TYPE_CHECK_CLASS_TYPE ((iface), MEX_TYPE_MODEL))
+</pre>
+</div>
+<hr>
+<div class="refsect2" title="MexModel">
+<a name="MexModel-struct"></a><h3>MexModel</h3>
+<pre class="programlisting">typedef struct _MexModel MexModel;</pre>
+</div>
+<hr>
+<div class="refsect2" title="MexModelIface">
+<a name="MexModelIface"></a><h3>MexModelIface</h3>
+<pre class="programlisting">typedef struct {
+  GTypeInterface g_iface;
+
+  /* virtual functions */
+  GController *   (*get_controller)   (MexModel *list);
+  MexContent *    (*get_content)      (MexModel *list,
+                                       guint     index);
+  void (*add_content) (MexModel   *model,
+                       MexContent *content);
+  void (*remove_content) (MexModel   *model,
+                          MexContent *content);
+  void (*clear) (MexModel *model);
+  void (*set_sort_func) (MexModel         *model,
+                         MexModelSortFunc  sort_func,
+                         gpointer          user_data);
+  guint (*get_length) (MexModel *model);
+  gint  (*index)      (MexModel *model, MexContent *content);
+} MexModelIface;
+</pre>
+</div>
+<hr>
+<div class="refsect2" title="MexModelSortFunc ()">
+<a name="MexModelSortFunc"></a><h3>MexModelSortFunc ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>                (*MexModelSortFunc)                 (<em class="parameter"><code><a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a> *a</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a> *b</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> userdata</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_model_get_controller ()">
+<a name="mex-model-get-controller"></a><h3>mex_model_get_controller ()</h3>
+<pre class="programlisting"><span class="returnvalue">GController</span> *       mex_model_get_controller            (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *list</code></em>);</pre>
+<p>
+Retrieves the <span class="type">GController</span> object for this <em class="parameter"><code>model</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>model</code></em> :</span></p></td>
+<td>a <a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <span class="type">GController</span>. Call <code class="function">g_object_unref()</code> on the controller once
+finished with it.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.2</p>
+</div>
+<hr>
+<div class="refsect2" title="mex_model_get_content ()">
+<a name="mex-model-get-content"></a><h3>mex_model_get_content ()</h3>
+<pre class="programlisting"><a class="link" href="MexContent.html" title="MexContent"><span class="returnvalue">MexContent</span></a> *        mex_model_get_content               (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *list</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> index_</code></em>);</pre>
+<p>
+Retrieves the <a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a> object at position <em class="parameter"><code>index</code></em> for this <em class="parameter"><code>model</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>model</code></em> :</span></p></td>
+<td>a <a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em> :</span></p></td>
+<td>a position
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <span class="type">GController</span>. Call <code class="function">g_object_unref()</code> on the controller once
+finished with it.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.2</p>
+</div>
+<hr>
+<div class="refsect2" title="mex_model_add_content ()">
+<a name="mex-model-add-content"></a><h3>mex_model_add_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_model_add_content               (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *model</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a> *content</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_model_remove_content ()">
+<a name="mex-model-remove-content"></a><h3>mex_model_remove_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_model_remove_content            (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *model</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a> *content</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_model_clear ()">
+<a name="mex-model-clear"></a><h3>mex_model_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_model_clear                     (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_model_set_sort_func ()">
+<a name="mex-model-set-sort-func"></a><h3>mex_model_set_sort_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_model_set_sort_func             (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *model</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexModel.html#MexModelSortFunc" title="MexModelSortFunc ()"><span class="type">MexModelSortFunc</span></a> sort_func</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> userdata</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_model_get_length ()">
+<a name="mex-model-get-length"></a><h3>mex_model_get_length ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>               mex_model_get_length                (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_model_index ()">
+<a name="mex-model-index"></a><h3>mex_model_index ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>                mex_model_index                     (<em class="parameter"><code><a class="link" href="MexModel.html" title="MexModel"><span class="type">MexModel</span></a> *model</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexContent.html" title="MexContent"><span class="type">MexContent</span></a> *content</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="MexModel.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "sort-data" property'>
+<a name="MexModel--sort-data"></a><h3>The <code class="literal">"sort-data"</code> property</h3>
+<pre class="programlisting">  "sort-data"                <span class="type">gpointer</span>              : Read</pre>
+<p>User-data used when calling sort function.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "sort-function" property'>
+<a name="MexModel--sort-function"></a><h3>The <code class="literal">"sort-function"</code> property</h3>
+<pre class="programlisting">  "sort-function"            <span class="type">gpointer</span>              : Read</pre>
+<p>The sorting function used on the model.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.15</div>
+</body>
+</html>

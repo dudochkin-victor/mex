@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexInfoPanel</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch09.html" title="Basic widgets">
+<link rel="prev" href="MexInfoBar.html" title="MexInfoBar">
+<link rel="next" href="MexMediaControls.html" title="MexMediaControls">
+<meta name="generator" content="GTK-Doc V1.15 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexInfoBar.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexMediaControls.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexInfoPanel.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexInfoPanel.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexInfoPanel.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexInfoPanel.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#MexInfoPanel.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="MexInfoPanel">
+<a name="MexInfoPanel"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexInfoPanel.top_of_page"></a>MexInfoPanel</span></h2>
+<p>MexInfoPanel</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="MexInfoPanel.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="MexInfoPanel.html#MexInfoPanel-struct" title="MexInfoPanel">MexInfoPanel</a>;
+                    <a class="link" href="MexInfoPanel.html#MexInfoPanelClass" title="MexInfoPanelClass">MexInfoPanelClass</a>;
+                    <a class="link" href="MexInfoPanel.html#MexInfoPanelPrivate" title="MexInfoPanelPrivate">MexInfoPanelPrivate</a>;
+enum                <a class="link" href="MexInfoPanel.html#MexInfoPanelMode" title="enum MexInfoPanelMode">MexInfoPanelMode</a>;
+<a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="MexInfoPanel.html#mex-info-panel-new" title="mex_info_panel_new ()">mex_info_panel_new</a>                  (<em class="parameter"><code><a class="link" href="MexInfoPanel.html#MexInfoPanelMode" title="enum MexInfoPanelMode"><span class="type">MexInfoPanelMode</span></a> mode</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="MexInfoPanel.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----<a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html">ClutterActor</a>
+               +----MxWidget
+                     +----MxBin
+                           +----MxFrame
+                                 +----MexInfoPanel
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="MexInfoPanel.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MexInfoPanel implements
+ <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterScriptable.html">ClutterScriptable</a>,  <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterAnimatable.html">ClutterAnimatable</a>,  AtkImplementorIface,  MxStylable,  <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterContainer.html">ClutterContainer</a>,  MxFocusable and  <a class="link" href="MexContentView.html" title="MexContentView">MexContentView</a>.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="MexInfoPanel.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexInfoPanel.html#MexInfoPanel--mode" title='The "mode" property'>mode</a>"                     <a class="link" href="MexInfoPanel.html#MexInfoPanelMode" title="enum MexInfoPanelMode"><span class="type">MexInfoPanelMode</span></a>      : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="MexInfoPanel.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1" title="Details">
+<a name="MexInfoPanel.details"></a><h2>Details</h2>
+<div class="refsect2" title="MexInfoPanel">
+<a name="MexInfoPanel-struct"></a><h3>MexInfoPanel</h3>
+<pre class="programlisting">typedef struct _MexInfoPanel MexInfoPanel;</pre>
+</div>
+<hr>
+<div class="refsect2" title="MexInfoPanelClass">
+<a name="MexInfoPanelClass"></a><h3>MexInfoPanelClass</h3>
+<pre class="programlisting">typedef struct {
+  MxFrameClass parent_class;
+} MexInfoPanelClass;
+</pre>
+</div>
+<hr>
+<div class="refsect2" title="MexInfoPanelPrivate">
+<a name="MexInfoPanelPrivate"></a><h3>MexInfoPanelPrivate</h3>
+<pre class="programlisting">typedef struct _MexInfoPanelPrivate MexInfoPanelPrivate;</pre>
+</div>
+<hr>
+<div class="refsect2" title="enum MexInfoPanelMode">
+<a name="MexInfoPanelMode"></a><h3>enum MexInfoPanelMode</h3>
+<pre class="programlisting">typedef enum
+{
+  MEX_INFO_PANEL_MODE_FULL,
+  MEX_INFO_PANEL_MODE_SIMPLE
+} MexInfoPanelMode;
+</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_info_panel_new ()">
+<a name="mex-info-panel-new"></a><h3>mex_info_panel_new ()</h3>
+<pre class="programlisting"><a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_info_panel_new                  (<em class="parameter"><code><a class="link" href="MexInfoPanel.html#MexInfoPanelMode" title="enum MexInfoPanelMode"><span class="type">MexInfoPanelMode</span></a> mode</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="MexInfoPanel.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "mode" property'>
+<a name="MexInfoPanel--mode"></a><h3>The <code class="literal">"mode"</code> property</h3>
+<pre class="programlisting">  "mode"                     <a class="link" href="MexInfoPanel.html#MexInfoPanelMode" title="enum MexInfoPanelMode"><span class="type">MexInfoPanelMode</span></a>      : Read / Write / Construct Only</pre>
+<p>Display mode for the info panel.</p>
+<p>Default value: MEX_INFO_PANEL_MODE_FULL</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.15</div>
+</body>
+</html>

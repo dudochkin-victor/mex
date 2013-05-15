@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexClockBin</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch09.html" title="Basic widgets">
+<link rel="prev" href="MexActionButton.html" title="MexActionButton">
+<link rel="next" href="MexContentBox.html" title="MexContentBox">
+<meta name="generator" content="GTK-Doc V1.15 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexActionButton.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexContentBox.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexClockBin.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexClockBin.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexClockBin.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexClockBin.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#MexClockBin.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="MexClockBin">
+<a name="MexClockBin"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexClockBin.top_of_page"></a>MexClockBin</span></h2>
+<p>MexClockBin</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="MexClockBin.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="MexClockBin.html#MexClockBin-struct" title="MexClockBin">MexClockBin</a>;
+                    <a class="link" href="MexClockBin.html#MexClockBinClass" title="MexClockBinClass">MexClockBinClass</a>;
+                    <a class="link" href="MexClockBin.html#MexClockBinPrivate" title="MexClockBinPrivate">MexClockBinPrivate</a>;
+<a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="MexClockBin.html#mex-clock-bin-new" title="mex_clock_bin_new ()">mex_clock_bin_new</a>                   (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">MxIcon</span> *            <a class="link" href="MexClockBin.html#mex-clock-bin-get-icon" title="mex_clock_bin_get_icon ()">mex_clock_bin_get_icon</a>              (<em class="parameter"><code><a class="link" href="MexClockBin.html" title="MexClockBin"><span class="type">MexClockBin</span></a> *bin</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Object Hierarchy">
+<a name="MexClockBin.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----<a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html">ClutterActor</a>
+               +----MxWidget
+                     +----MxBin
+                           +----MexClockBin
+</pre>
+</div>
+<div class="refsect1" title="Implemented Interfaces">
+<a name="MexClockBin.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MexClockBin implements
+ <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterScriptable.html">ClutterScriptable</a>,  <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterAnimatable.html">ClutterAnimatable</a>,  AtkImplementorIface,  MxStylable,  <a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterContainer.html">ClutterContainer</a> and  MxFocusable.</p>
+</div>
+<div class="refsect1" title="Properties">
+<a name="MexClockBin.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexClockBin.html#MexClockBin--icon" title='The "icon" property'>icon</a>"                     <span class="type">MxIcon</span>*               : Read
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="MexClockBin.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1" title="Details">
+<a name="MexClockBin.details"></a><h2>Details</h2>
+<div class="refsect2" title="MexClockBin">
+<a name="MexClockBin-struct"></a><h3>MexClockBin</h3>
+<pre class="programlisting">typedef struct _MexClockBin MexClockBin;</pre>
+</div>
+<hr>
+<div class="refsect2" title="MexClockBinClass">
+<a name="MexClockBinClass"></a><h3>MexClockBinClass</h3>
+<pre class="programlisting">typedef struct {
+  MxBinClass parent_class;
+} MexClockBinClass;
+</pre>
+</div>
+<hr>
+<div class="refsect2" title="MexClockBinPrivate">
+<a name="MexClockBinPrivate"></a><h3>MexClockBinPrivate</h3>
+<pre class="programlisting">typedef struct _MexClockBinPrivate MexClockBinPrivate;</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_clock_bin_new ()">
+<a name="mex-clock-bin-new"></a><h3>mex_clock_bin_new ()</h3>
+<pre class="programlisting"><a href="/home/damien/mex/install/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_clock_bin_new                   (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2" title="mex_clock_bin_get_icon ()">
+<a name="mex-clock-bin-get-icon"></a><h3>mex_clock_bin_get_icon ()</h3>
+<pre class="programlisting"><span class="returnvalue">MxIcon</span> *            mex_clock_bin_get_icon              (<em class="parameter"><code><a class="link" href="MexClockBin.html" title="MexClockBin"><span class="type">MexClockBin</span></a> *bin</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="MexClockBin.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "icon" property'>
+<a name="MexClockBin--icon"></a><h3>The <code class="literal">"icon"</code> property</h3>
+<pre class="programlisting">  "icon"                     <span class="type">MxIcon</span>*               : Read</pre>
+<p>The MxIcon displayed to the right of the clock.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.15</div>
+</body>
+</html>
